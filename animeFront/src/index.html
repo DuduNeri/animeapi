@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes api</title>
+    <link rel="shortcut icon" href="/animeFront/assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="/animeFront/assets/naruto.png" alt="imagem do anime" class="narutoImage">
+    <main class="mainContainer">
+        <img src="/animeFront/assets/logo.png" alt="logo" class="logo">
+        <input type="text" id="searchInput" placeholder="Insira um nome de um personagem">
+        <button id="searchButton">Pesquisar</button>
+        <div id="results">
+            <dialog id="animeDialog" class="animeDialog">
+                <h2 id="nome"></h2>
+                <p><strong>Universo:</strong> <span id="universo"></span></p>
+                <p><strong>Tipo:</strong> <span id="tipo"></span></p>
+                <p><strong>Clã:</strong> <span id="cla"></span></p>
+                <p><strong>Raça:</strong> <span id="raca"></span></p>
+                <p><strong>Poder:</strong> <span id="poder"></span></p>
+                <p><strong>Habilidades:</strong></p>
+                <ul id="habilidades"></ul>
+
+                <button id="closeDialog" class="closeButton">Close</button>
+            </dialog>
+        </div>
+    </main>
+    <img src="/animeFront/assets/gokuSsj.png" alt="personagem de dbz" class="dbzImage">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

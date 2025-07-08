@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rock+Salt&display=swap');
+
+body {
+  height: 90vh;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #facc15, rgb(153, 65, 3));
+  font-family: 'Rock Salt', cursive;
+  padding: 20px;
+  flex-wrap: wrap;
+  animation: fadeInBody 1s ease-in-out;
+}
+
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 10px;
+  animation: floatIn 1.2s ease-in-out;
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.search-container {
+  display: flex;
+  gap: 12px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
+  flex-wrap: wrap;
+}
+.animeDialog{
+  width: 400px;
+  height: auto;
+  
+}
+
+#searchInput {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ff6a00;
+  background-color: #fef3c7;
+  color: #000;
+  border-radius: 8px;
+  width: 311px;
+  font-family: 'Rock Salt', cursive;
+  transition: box-shadow 0.3s ease;
+}
+
+#searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ff6a00;
+}
+
+#searchInput::placeholder {
+  color: #ff6a00;
+}
+
+#searchButton {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: radial-gradient(circle, #facc15, #f97316);
+  color: #1f2937;
+  border: 2px solid #eab308;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+#searchButton:hover {
+  transform: scale(1.05);
+  background: radial-gradient(circle, #fde047, #fb923c);
+  box-shadow: 0 0 10px #eab308;
+}
+
+.closeButton {
+  margin-top: 20px;
+  background: radial-gradient(circle, #facc15, #f97316);
+  color: #1f2937;
+  border: 2px solid #eab308;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.closeButton:hover {
+  background: radial-gradient(circle, #fde047, #fb923c);
+  transform: scale(1.05);
+}
+
+
+.narutoImage {
+  width: 200px;
+  height: auto;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  animation: floatNaruto 1.5s ease, floatY 2.5s ease-in-out infinite;
+}
+
+@keyframes floatNaruto {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.narutoImage:hover {
+  transform: translateY(-20px);
+  filter: drop-shadow(0 0 15px #ff0000) brightness(1.1);
+}
+
+
+.dbzImage {
+  width: 170px;
+  height: auto;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  animation: floatGoku 1.5s ease, floatY 2.5s ease-in-out infinite;
+}
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGoku {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.dbzImage:hover {
+  transform: translateY(-20px);
+  filter: drop-shadow(0 0 15px #ffe600) brightness(1.1);
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+  transition: transform 1s ease, filter 0.5s ease;
+  animation: floatLogo 1s ease-in-out infinite;
+}
+
+.logo:hover {
+  transform: translateY(-20px);
+  filter: drop-shadow(0 0 8px #ff012b) brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .narutoImage,
+  .dbzImage {
+    width: 200px;
+    margin: 0;
+  }
+
+  .logo {
+    width: 250px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
